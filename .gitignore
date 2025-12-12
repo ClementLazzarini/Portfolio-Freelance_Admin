@@ -1,0 +1,17 @@
+# Paramètres spécifiques à l'utilisateur
+.vscode/
+
+# --- Fichiers système (macOS / Windows) ---
+.DS_Store
+
+# --- Fichiers sensibles ---
+# Logs
+*.log
+logs/
+
+# Fichiers d'environnement (pour les clés secrètes)
+.env
+.env.*
+
+
+node_modules/
