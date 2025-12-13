@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* --- TON CSS PERSONNALISÉ COMMENCE ICI --- */
+
+/* Animation de flottement pour les bulles (Version Boostée) */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    /* On passe de 30px à 80px -> Grand mouvement vers la droite/haut */
+    transform: translate(80px, -80px) scale(1.2); 
+  }
+  66% {
+    /* On passe de -20px à -50px -> Grand mouvement inverse */
+    transform: translate(-50px, 50px) scale(0.8);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Pour décaler l'animation des différentes bulles */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Animation d'apparition simple */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
